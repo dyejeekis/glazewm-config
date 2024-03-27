@@ -25,30 +25,30 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "20px"
+  inner_gap: "10px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "20px"
+  outer_gap: "10px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#0000ff"
+    color: "#76eec6"
 
   inactive:
     enabled: false
-    color: "#ff0000"
+    color: "#ba0048"
 
 bar:
   height: "30px"
   position: "top"
-  opacity: 1.0
+  opacity: 0.75
   background: "#20242cc4"
   foreground: "#ffffff"
   font_family: "Segoe UI"
-  font_size: "13px"
+  font_size: "16px"
   padding: "4px 6px"
   offset_x: "0"
   offset_y: "0"
@@ -58,6 +58,17 @@ bar:
       focused_workspace_background: "#ffffff33"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
+    - type: "music"
+      label_not_playing: ""
+      label_paused: "{song_title} - {artist_name}"
+      label_playing: "{song_title} - {artist_name} ▶"
+      max_title_length: 20
+      max_artist_length: 20
+    - type: "volume"
+      label_low: "🔊{volume_level}%"
+      label_medium: "🔊{volume_level}%"
+      label_high: "🔊{volume_level}%"
+      label_mute: "🔊{volume_level}%"
   components_center:
     - type: "window title"
   components_right:
@@ -76,6 +87,20 @@ bar:
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MMM d"
+    - type: "weather"
+      latitude: 40.6892
+      longitude: 74.0445
+      label: "{temperature_celsius}°C"
+      label_sun: "☀️ {temperature_celsius}°C"
+      label_moon: "🌙 {temperature_celsius}°C"
+      label_cloud_moon: "🌙☁️ {temperature_celsius}°C"
+      label_cloud_sun: "⛅ {temperature_celsius}°C"
+      label_cloud_moon_rain: "🌙🌧️ {temperature_celsius}°C"
+      label_cloud_sun_rain: "🌦️ {temperature_celsius}°C"
+      label_cloud_rain: "🌧️ {temperature_celsius}°C"
+      label_snow_flake: "❄️ {temperature_celsius}°C"
+      label_thunderstorm: "⚡ {temperature_celsius}°C"
+      label_cloud: "☁️ {temperature_celsius}°C"
 
 workspaces:
   - name: "1"
@@ -113,13 +138,13 @@ binding_modes:
     keybindings:
       # Resize focused window by a percentage or pixel amount.
       - command: "resize width -2%"
-        bindings: ["H", "Left"]
+        bindings: ["H"]
       - command: "resize width +2%"
-        bindings: ["L", "Right"]
+        bindings: ["L"]
       - command: "resize height +2%"
-        bindings: ["K", "Up"]
+        bindings: ["K"]
       - command: "resize height -2%"
-        bindings: ["J", "Down"]
+        bindings: ["J"]
       # Press enter/escape to return to default keybindings.
       - command: "binding mode none"
         bindings: ["Escape", "Enter"]
@@ -127,23 +152,23 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   - command: "focus left"
-    bindings: ["Alt+H", "Alt+Left"]
+    bindings: ["Alt+H"]
   - command: "focus right"
-    bindings: ["Alt+L", "Alt+Right"]
+    bindings: ["Alt+L"]
   - command: "focus up"
-    bindings: ["Alt+K", "Alt+Up"]
+    bindings: ["Alt+K"]
   - command: "focus down"
-    bindings: ["Alt+J", "Alt+Down"]
+    bindings: ["Alt+J"]
 
   # Move focused window in a given direction.
   - command: "move left"
-    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+    bindings: ["Alt+Shift+H"]
   - command: "move right"
-    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+    bindings: ["Alt+Shift+L"]
   - command: "move up"
-    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+    bindings: ["Alt+Shift+K"]
   - command: "move down"
-    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+    bindings: ["Alt+Shift+J"]
 
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"
@@ -157,8 +182,8 @@ keybindings:
 
   # As an alternative to the resize keybindings above, resize mode enables resizing via
   # HJKL or arrow keys. The binding mode is defined above with the name "resize".
-  - command: "binding mode resize"
-    binding: "Alt+R"
+  # - command: "binding mode resize"
+    # binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
   - command: "tiling direction toggle"
@@ -194,8 +219,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec cmd"
-    binding: "Alt+Enter"
+  # - command: "exec cmd"
+    # binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
