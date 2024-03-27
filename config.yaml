@@ -88,8 +88,8 @@ bar:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MMM d"
     - type: "weather"
-      latitude: 40.6892
-      longitude: 74.0445
+      latitude: 40.635750
+      longitude: 22.946709
       label: "{temperature_celsius}°C"
       label_sun: "☀️ {temperature_celsius}°C"
       label_moon: "🌙 {temperature_celsius}°C"
