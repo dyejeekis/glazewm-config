@@ -21,7 +21,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "unchanged"
+  window_animations: "false"
 
 gaps:
   # Gap between adjacent windows.
@@ -35,7 +35,7 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#76eec6"
+    color: "#6f00ff"
 
   inactive:
     enabled: false
@@ -53,6 +53,8 @@ bar:
   offset_x: "0"
   offset_y: "0"
   border_radius: "0"
+  component_separator:
+    label: "  "
   components_left:
     - type: "workspaces"
       focused_workspace_background: "#ffffff33"
@@ -65,13 +67,19 @@ bar:
       max_title_length: 20
       max_artist_length: 20
     - type: "volume"
-      label_low: "🔊{volume_level}%"
-      label_medium: "🔊{volume_level}%"
+      label_low: "🔈{volume_level}%"
+      label_medium: "🔉{volume_level}%"
       label_high: "🔊{volume_level}%"
-      label_mute: "🔊{volume_level}%"
+      label_mute: "🔇{volume_level}%"
   components_center:
     - type: "window title"
   components_right:
+    - type: "cpu"
+      label: "CPU {percent_usage}%"
+      refresh_interval_ms: 1000
+    - type: "gpu"
+      label: "GPU {percent_usage}%"
+      refresh_interval_ms: 1000
     - type: "system tray"
     - type: "tiling direction"
       label_horizontal: "⮂"
@@ -112,6 +120,7 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
+  - name: "0"
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
@@ -132,6 +141,69 @@ window_rules:
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
+
+  - command: "move to workspace 1"
+    match_title: "General"
+
+  - command: "move to workspace 1"
+    match_title: "Watch"
+
+  - command: "move left"
+    match_title: "General"
+
+  - command: "move to workspace 2"
+    match_title: "Gamedev"
+
+  - command: "move to workspace 3"
+    match_process_name: "Discord"
+
+  - command: "move to workspace 3"
+    match_process_name: "Telegram"
+
+  - command: "move right"
+    match_process_name: "Telegram"
+
+  - command: "move to workspace 7"
+    match_process_name: "steamwebhelper"
+
+  - command: "move to workspace 7"
+    match_process_name: "Battle.net"
+
+  - command: "move to workspace 7"
+    match_process_name: "EpicGamesLauncher"
+
+  - command: "move to workspace 7"
+    match_process_name: "GalaxyClient"
+
+  - command: "move to workspace 7"
+    match_process_name: "Playnite.DesktopApp"
+
+  - command: "move to workspace 8"
+    match_process_name: "Spotify"
+
+  - command: "move to workspace 8"
+    match_title: "Music"
+
+  - command: "move left"
+    match_process_name: "Spotify"
+
+  - command: "move to workspace 9"
+    match_title: "Customize"
+
+  - command: "move to workspace 0"
+    match_process_name: "WindowsTerminal"
+
+  - command: "set floating"
+    match_process_name: "godot"
+
+  - command: "set floating"
+    match_process_name: "Everything"
+
+  - command: "set floating"
+    match_process_name: "MailClient"
+
+  - command: "set floating"
+    match_title: "Calculator"
 
 binding_modes:
   - name: "resize"
@@ -219,7 +291,7 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  # - command: "exec cmd"
+  # - command: "exec wt"
     # binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
@@ -251,6 +323,8 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
+  - command: "focus workspace 0"
+    binding: "Alt+0"
 
   # Move focused workspace to a monitor in a given direction.
   - command: "move workspace left"
@@ -281,3 +355,5 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
+  - commands: ["move to workspace 0", "focus workspace 0"]
+    bindings: ["Alt+Shift+0"]
