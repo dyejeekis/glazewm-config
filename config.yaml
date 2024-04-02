@@ -142,6 +142,8 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
 
+  # workspace 1
+
   - command: "move to workspace 1"
     match_title: "General"
 
@@ -151,8 +153,15 @@ window_rules:
   - command: "move left"
     match_title: "General"
 
+  - command: "move right"
+    match_title: "Watch"
+
+  # workspace 2
+
   - command: "move to workspace 2"
     match_title: "Gamedev"
+
+  # workspace 3
 
   - command: "move to workspace 3"
     match_process_name: "Discord"
@@ -160,8 +169,13 @@ window_rules:
   - command: "move to workspace 3"
     match_process_name: "Telegram"
 
+  - command: "move left"
+    match_process_name: "Discord"
+
   - command: "move right"
     match_process_name: "Telegram"
+
+  # workspace 7
 
   - command: "move to workspace 7"
     match_process_name: "steamwebhelper"
@@ -178,6 +192,29 @@ window_rules:
   - command: "move to workspace 7"
     match_process_name: "Playnite.DesktopApp"
 
+  - command: "move to workspace 7"
+    match_title: "Games"
+
+  - command: "move left"
+    match_process_name: "steamwebhelper"
+
+  - command: "move left"
+    match_process_name: "Battle.net"
+
+  - command: "move left"
+    match_process_name: "EpicGamesLauncher"
+
+  - command: "move left"
+    match_process_name: "GalaxyClient"
+
+  - command: "move left"
+    match_process_name: "Playnite.DesktopApp"
+
+  - command: "move right"
+    match_title: "Games"
+
+  # workspace 8
+
   - command: "move to workspace 8"
     match_process_name: "Spotify"
 
@@ -187,11 +224,23 @@ window_rules:
   - command: "move left"
     match_process_name: "Spotify"
 
+  - command: "move right"
+    match_title: "Music"
+
+  # workspace 9
+
   - command: "move to workspace 9"
     match_title: "Customize"
 
+  # workspace 0
+
   - command: "move to workspace 0"
     match_process_name: "WindowsTerminal"
+
+  # floating windows
+
+  - command: "set floating"
+    match_process_name: "explorer"
 
   - command: "set floating"
     match_process_name: "godot"
@@ -201,6 +250,15 @@ window_rules:
 
   - command: "set floating"
     match_process_name: "MailClient"
+
+  - command: "set floating"
+    match_process_name: "qbittorrent"
+
+  - command: "set floating"
+    match_process_name: "vlc"
+
+  - command: "set floating"
+    match_process_name: "parsecd"
 
   - command: "set floating"
     match_title: "Calculator"
