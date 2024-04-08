@@ -72,25 +72,7 @@ bar:
       label_high: "🔊{volume_level}%"
       label_mute: "🔇{volume_level}%"
   components_center:
-    - type: "window title"
-  components_right:
-    - type: "cpu"
-      label: "CPU {percent_usage}%"
-      refresh_interval_ms: 1000
-    - type: "gpu"
-      label: "GPU {percent_usage}%"
-      refresh_interval_ms: 1000
-    - type: "system tray"
-    - type: "tiling direction"
-      label_horizontal: "⮂"
-      label_vertical: "⮁"
-      background: "#ffffff33"
-      margin: "0 4px"
-      padding: "0 8px"
-    - type: "binding mode"
-      background: "#ffffff33"
-      margin: "0 4px 0 0"
-      padding: "0 8px"
+    # - type: "window title"
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
@@ -109,6 +91,24 @@ bar:
       label_snow_flake: "❄️ {temperature_celsius}°C"
       label_thunderstorm: "⚡ {temperature_celsius}°C"
       label_cloud: "☁️ {temperature_celsius}°C"
+  components_right:
+    - type: "cpu"
+      label: "CPU {percent_usage}%"
+      refresh_interval_ms: 1000
+    - type: "gpu"
+      label: "GPU {percent_usage}%"
+      refresh_interval_ms: 1000
+    - type: "system tray"
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
+    - type: "binding mode"
+      background: "#ffffff33"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
 
 workspaces:
   - name: "1"
@@ -161,64 +161,83 @@ window_rules:
   - command: "move to workspace 2"
     match_title: "Gamedev"
 
+  - command: "move to workspace 2"
+    match_title: ".*donut.*"
+
+  - command: "move left"
+    match_title: "Gamedev"
+
+  - command: "move right"
+    match_title: ".*donut.*"
+
   # workspace 3
 
   - command: "move to workspace 3"
-    match_process_name: "Discord"
+    match_process_name: "godot"
 
-  - command: "move to workspace 3"
-    match_process_name: "Telegram"
+  # workspace 5
 
-  - command: "move left"
-    match_process_name: "Discord"
+  - command: "move to workspace 5"
+    match_title: "Customize"
 
-  - command: "move right"
-    match_process_name: "Telegram"
+  - command: "move to workspace 5"
+    match_title: ".*glaze-wm.*"
 
-  # workspace 7
-
-  - command: "move to workspace 7"
-    match_process_name: "steamwebhelper"
-
-  - command: "move to workspace 7"
-    match_process_name: "Battle.net"
-
-  - command: "move to workspace 7"
-    match_process_name: "EpicGamesLauncher"
-
-  - command: "move to workspace 7"
-    match_process_name: "GalaxyClient"
-
-  - command: "move to workspace 7"
-    match_process_name: "Playnite.DesktopApp"
-
-  - command: "move to workspace 7"
-    match_title: "Games"
+  - command: "move to workspace 5"
+    match_title: ".*User.*"
 
   - command: "move left"
-    match_process_name: "steamwebhelper"
+    match_title: "Customize"
 
-  - command: "move left"
-    match_process_name: "Battle.net"
+  # workspace 6
 
-  - command: "move left"
-    match_process_name: "EpicGamesLauncher"
-
-  - command: "move left"
-    match_process_name: "GalaxyClient"
-
-  - command: "move left"
-    match_process_name: "Playnite.DesktopApp"
-
-  - command: "move right"
-    match_title: "Games"
+  - command: "move to workspace 6"
+    match_process_name: "WindowsTerminal"
 
   # workspace 8
 
   - command: "move to workspace 8"
-    match_process_name: "Spotify"
+    match_process_name: "steamwebhelper"
 
   - command: "move to workspace 8"
+    match_process_name: "Battle.net"
+
+  - command: "move to workspace 8"
+    match_process_name: "EpicGamesLauncher"
+
+  - command: "move to workspace 8"
+    match_process_name: "GalaxyClient"
+
+  - command: "move to workspace 8"
+    match_process_name: "Playnite.DesktopApp"
+
+  - command: "move to workspace 8"
+    match_title: "Games"
+
+  - command: "move left"
+    match_process_name: "steamwebhelper"
+
+  - command: "move left"
+    match_process_name: "Battle.net"
+
+  - command: "move left"
+    match_process_name: "EpicGamesLauncher"
+
+  - command: "move left"
+    match_process_name: "GalaxyClient"
+
+  - command: "move left"
+    match_process_name: "Playnite.DesktopApp"
+
+  - command: "move right"
+    match_title: "Games"
+
+  # workspace 9
+
+  - command: "move to workspace 9"
+    match_process_name: "Spotify"
+
+  - command: "move to workspace 9"
     match_title: "Music"
 
   - command: "move left"
@@ -227,15 +246,19 @@ window_rules:
   - command: "move right"
     match_title: "Music"
 
-  # workspace 9
-
-  - command: "move to workspace 9"
-    match_title: "Customize"
-
   # workspace 0
 
   - command: "move to workspace 0"
-    match_process_name: "WindowsTerminal"
+    match_process_name: "Discord"
+
+  - command: "move to workspace 0"
+    match_process_name: "Telegram"
+
+  - command: "move left"
+    match_process_name: "Discord"
+
+  - command: "move right"
+    match_process_name: "Telegram"
 
   # floating windows
 
@@ -262,6 +285,11 @@ window_rules:
 
   - command: "set floating"
     match_title: "Calculator"
+
+  # ignore
+
+  - command: "ignore"
+    match_title: "Volume Mixer.*"
 
 binding_modes:
   - name: "resize"
