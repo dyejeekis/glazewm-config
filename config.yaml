@@ -284,12 +284,18 @@ window_rules:
     match_process_name: "parsecd"
 
   - command: "set floating"
+    match_process_name: "7zFM"
+
+  - command: "set floating"
     match_title: "Calculator"
 
   # ignore
 
   - command: "ignore"
     match_title: "Volume Mixer.*"
+
+  - command: "ignore"
+    match_process_name: "7zG"
 
 binding_modes:
   - name: "resize"
