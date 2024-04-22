@@ -191,8 +191,8 @@ window_rules:
 
   # workspace 6
 
-  - command: "move to workspace 6"
-    match_process_name: "WindowsTerminal"
+  # - command: "move to workspace 6"
+    # match_process_name: "WindowsTerminal"
 
   # workspace 8
 
@@ -213,6 +213,9 @@ window_rules:
 
   - command: "move to workspace 8"
     match_title: "Games"
+
+  - command: "move to workspace 8"
+    match_process_name: "Balatro"
 
   - command: "move left"
     match_process_name: "steamwebhelper"
@@ -262,8 +265,8 @@ window_rules:
 
   # floating windows
 
-  - command: "set floating"
-    match_process_name: "explorer"
+  # - command: "set floating"
+    # match_process_name: "explorer"
 
   - command: "set floating"
     match_process_name: "godot"
