@@ -159,16 +159,13 @@ window_rules:
   # workspace 2
 
   - command: "move to workspace 2"
-    match_title: "Gamedev"
+    match_title: "Learn General"
 
   - command: "move to workspace 2"
-    match_title: ".*donut.*"
+    match_title: "Learn Watch"
 
   - command: "move left"
-    match_title: "Gamedev"
-
-  - command: "move right"
-    match_title: ".*donut.*"
+    match_title: "Learn General"
 
   # workspace 3
 
@@ -178,15 +175,6 @@ window_rules:
   # workspace 5
 
   - command: "move to workspace 5"
-    match_title: "Customize"
-
-  - command: "move to workspace 5"
-    match_title: ".*glaze-wm.*"
-
-  - command: "move to workspace 5"
-    match_title: ".*User.*"
-
-  - command: "move left"
     match_title: "Customize"
 
   # workspace 6
@@ -270,6 +258,9 @@ window_rules:
 
   - command: "set floating"
     match_process_name: "godot"
+
+  - command: "set tiling"
+    match_title: ".*Godot Engine.*"
 
   - command: "set floating"
     match_process_name: "Everything"
@@ -386,8 +377,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  # - command: "exec wt"
-    # binding: "Alt+Enter"
+  - command: "exec wt"
+    binding: "Alt+N"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
