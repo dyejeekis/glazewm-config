@@ -156,21 +156,16 @@ window_rules:
   - command: "move right"
     match_title: "Watch"
 
-  # workspace 2
+  # workspace 4
 
-  - command: "move to workspace 2"
+  - command: "move to workspace 4"
     match_title: "Learn General"
 
-  - command: "move to workspace 2"
+  - command: "move to workspace 4"
     match_title: "Learn Watch"
 
   - command: "move left"
     match_title: "Learn General"
-
-  # workspace 3
-
-  - command: "move to workspace 3"
-    match_process_name: "godot"
 
   # workspace 5
 
@@ -259,9 +254,6 @@ window_rules:
   - command: "set floating"
     match_process_name: "godot"
 
-  - command: "set tiling"
-    match_title: ".*Godot Engine.*"
-
   - command: "set floating"
     match_process_name: "Everything"
 
@@ -282,6 +274,13 @@ window_rules:
 
   - command: "set floating"
     match_title: "Calculator"
+    
+  # tiling windows
+
+  # - command: "set tiling"
+  #   match_title: ".*Godot Engine.*"
+
+  # maximized windows
 
   # ignore
 
@@ -290,6 +289,9 @@ window_rules:
 
   - command: "ignore"
     match_process_name: "7zG"
+
+  - command: "ignore"
+    match_process_name: "mpv"
 
 binding_modes:
   - name: "resize"
