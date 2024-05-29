@@ -25,10 +25,10 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "10px"
+  inner_gap: "4px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "10px"
+  outer_gap: "4px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
@@ -43,7 +43,7 @@ focus_borders:
 
 bar:
   height: "30px"
-  position: "top"
+  position: "bottom"
   opacity: 0.75
   background: "#20242cc4"
   foreground: "#ffffff"
@@ -139,8 +139,8 @@ window_rules:
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
 
   # Some applications (eg. Steam) have borders that extend past the normal border size.
-  - command: "resize borders 0px -7px -7px -7px"
-    match_process_name: "steam"
+  - command: "resize borders -1px -8px -8px -8px"
+    match_process_name: "steamwebhelper"
 
   # workspace 1
 
@@ -156,16 +156,13 @@ window_rules:
   - command: "move right"
     match_title: "Watch"
 
-  # workspace 4
+  # workspace 2
 
-  - command: "move to workspace 4"
-    match_title: "Learn General"
+  - command: "move to workspace 2"
+    match_title: "Learn"
 
-  - command: "move to workspace 4"
-    match_title: "Learn Watch"
-
-  - command: "move left"
-    match_title: "Learn General"
+  - command: "move right"
+    match_title: "Learn"
 
   # workspace 5
 
@@ -274,6 +271,9 @@ window_rules:
 
   - command: "set floating"
     match_title: "Calculator"
+
+  - command: "set floating"
+    match_process_name: "studio64"
     
   # tiling windows
 
