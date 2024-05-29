@@ -123,14 +123,12 @@ workspaces:
   - name: "0"
 
 window_rules:
+  # ignore
+   
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
   - command: "ignore"
     match_process_name: "/Taskmgr|ScreenClippingHost/"
-
-  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
-  - command: "set floating"
-    match_class_name: "#32770"
 
   # Do not manage picture-in-picture windows for browsers. Note that the default is for
   # English; change `match_title` to the window's title if you use another language.
@@ -138,9 +136,59 @@ window_rules:
     match_title: "[Pp]icture.in.[Pp]icture"
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
 
+  - command: "ignore"
+    match_title: "Volume Mixer.*"
+
+  - command: "ignore"
+    match_process_name: "7zG"
+
+  - command: "ignore"
+    match_process_name: "mpv"
+
+  # floating
+
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  # - command: "set floating"
+    # match_process_name: "explorer"
+
+  - command: "set floating"
+    match_process_name: "godot"
+
+  - command: "set floating"
+    match_process_name: "Everything"
+
+  - command: "set floating"
+    match_process_name: "MailClient"
+
+  - command: "set floating"
+    match_process_name: "qbittorrent"
+
+  - command: "set floating"
+    match_process_name: "vlc"
+
+  - command: "set floating"
+    match_process_name: "parsecd"
+
+  - command: "set floating"
+    match_process_name: "7zFM"
+
+  - command: "set floating"
+    match_title: "Calculator"
+
+  - command: "set floating"
+    match_process_name: "studio64"
+
+  # resize
+
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders -1px -8px -8px -8px"
     match_process_name: "steamwebhelper"
+
+  - command: "resize borders -1px -8px -8px -8px"
+    match_process_name: "EpicGamesLauncher"
 
   # workspace 1
 
@@ -242,56 +290,6 @@ window_rules:
 
   - command: "move right"
     match_process_name: "Telegram"
-
-  # floating windows
-
-  # - command: "set floating"
-    # match_process_name: "explorer"
-
-  - command: "set floating"
-    match_process_name: "godot"
-
-  - command: "set floating"
-    match_process_name: "Everything"
-
-  - command: "set floating"
-    match_process_name: "MailClient"
-
-  - command: "set floating"
-    match_process_name: "qbittorrent"
-
-  - command: "set floating"
-    match_process_name: "vlc"
-
-  - command: "set floating"
-    match_process_name: "parsecd"
-
-  - command: "set floating"
-    match_process_name: "7zFM"
-
-  - command: "set floating"
-    match_title: "Calculator"
-
-  - command: "set floating"
-    match_process_name: "studio64"
-    
-  # tiling windows
-
-  # - command: "set tiling"
-  #   match_title: ".*Godot Engine.*"
-
-  # maximized windows
-
-  # ignore
-
-  - command: "ignore"
-    match_title: "Volume Mixer.*"
-
-  - command: "ignore"
-    match_process_name: "7zG"
-
-  - command: "ignore"
-    match_process_name: "mpv"
 
 binding_modes:
   - name: "resize"
