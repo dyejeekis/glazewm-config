@@ -377,7 +377,7 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec wt"
+  - command: "exec %ProgramFiles%/WezTerm/wezterm-gui.exe"
     binding: "Alt+N"
 
   # Focus the workspace that last had focus.
