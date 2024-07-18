@@ -151,8 +151,32 @@ window_rules:
   - command: "set floating"
     match_class_name: "#32770"
 
-  # - command: "set floating"
-    # match_process_name: "explorer"
+  - command: "set floating"
+    match_process_name: "explorer"
+
+  - command: "set floating"
+    match_title: "Media Player"
+
+  - command: "set floating"
+    match_process_name: "steamwebhelper"
+
+  - command: "set floating"
+    match_process_name: "Battle.net"
+
+  - command: "set floating"
+    match_process_name: "EpicGamesLauncher"
+
+  - command: "set floating"
+    match_process_name: "GalaxyClient"
+
+  - command: "set floating"
+    match_process_name: "Playnite.DesktopApp"
+
+  - command: "set floating"
+    match_process_name: "wezterm-gui"
+
+  - command: "set floating"
+    match_process_name: "blender"
 
   - command: "set floating"
     match_process_name: "godot"
