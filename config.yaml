@@ -155,6 +155,9 @@ window_rules:
     match_process_name: "explorer"
 
   - command: "set floating"
+    match_process_name: "xnviewmp"
+
+  - command: "set floating"
     match_title: "Media Player"
 
   - command: "set floating"
