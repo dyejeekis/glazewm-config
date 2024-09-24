@@ -25,9 +25,9 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '44px'
+    top: '4px'
     right: '4px'
-    bottom: '4px'
+    bottom: '44px'
     left: '4px'
 
 window_effects:
@@ -211,12 +211,12 @@ keybindings:
     bindings: ['alt+space']
 
   # Change the focused window to be floating.
-  - commands: ['toggle-floating --centered']
-    bindings: ['alt+shift+space']
+  # - commands: ['toggle-floating --centered']
+  #   bindings: ['alt+shift+space']
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+t']
+    bindings: ['alt+shift+space']
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
@@ -249,14 +249,14 @@ keybindings:
     bindings: ['alt+n']
 
   # Focus the next/previous workspace defined in `workspaces` config.
-  - commands: ['focus --next-workspace']
-    bindings: ['alt+s']
-  - commands: ['focus --prev-workspace']
-    bindings: ['alt+a']
+  # - commands: ['focus --next-workspace']
+  #   bindings: ['alt+s']
+  # - commands: ['focus --prev-workspace']
+  #   bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
-  - commands: ['focus --recent-workspace']
-    bindings: ['alt+d']
+  # - commands: ['focus --recent-workspace']
+  #   bindings: ['alt+d']
 
   # Change focus to a workspace defined in `workspaces` config.
   - commands: ['focus --workspace 1']
