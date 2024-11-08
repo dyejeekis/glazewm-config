@@ -80,6 +80,8 @@ workspaces:
   - name: '8'
   - name: '9'
   - name: '0'
+  - name: '-'
+  - name: '+'
 
 window_rules:
   - commands: ['ignore']
@@ -98,7 +100,7 @@ window_rules:
 
       - window_title: { regex: 'Volume Mixer.*' }
       - window_process: { equals: '7zG' }
-      - window_process: { equals: 'mpv' }
+      # - window_process: { equals: 'mpv' }
   - commands: ['set-floating']
     match:
       # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
@@ -122,6 +124,7 @@ window_rules:
       - window_process: { equals: '7zFM' }
       - window_process: { equals: 'Calculator' }
       - window_process: { equals: 'studio64' }
+      - window_process: { equals: 'mpv' }
   # - commands: ['move --workspace 8']
   #   match:
       # - window_process: { equals: 'steamwebhelper' }
@@ -129,10 +132,10 @@ window_rules:
       # - window_process: { equals: 'EpicGamesLauncher' }
       # - window_process: { equals: 'GalaxyClient' }
       # - window_process: { equals: 'Playnite.DesktopApp' }
-  - commands: ['move --workspace 9']
+  - commands: ['move --workspace -']
     match:
       - window_process: { equals: 'Spotify' }
-  - commands: ['move --workspace 0']
+  - commands: ['move --workspace +']
     match:
       - window_process: { equals: 'Discord' }
       - window_process: { equals: 'Telegram' }
@@ -279,6 +282,10 @@ keybindings:
     bindings: ['alt+9']
   - commands: ['focus --workspace 0']
     bindings: ['alt+0']
+  - commands: ['focus --workspace -']
+    bindings: ['alt+-']
+  - commands: ['focus --workspace +']
+    bindings: ['alt+=']
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -312,3 +319,7 @@ keybindings:
     bindings: ['alt+shift+9']
   - commands: ['move --workspace 0', 'focus --workspace 0']
     bindings: ['alt+shift+0']
+  - commands: ['move --workspace -', 'focus --workspace -']
+    bindings: ['alt+shift+-']
+  - commands: ['move --workspace +', 'focus --workspace +']
+    bindings: ['alt+shift+=']
