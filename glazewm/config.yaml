@@ -122,7 +122,7 @@ window_rules:
       - window_process: { equals: 'vlc' }
       - window_process: { equals: 'parsecd' }
       - window_process: { equals: '7zFM' }
-      - window_process: { equals: 'Calculator' }
+      - window_process: { equals: 'CalculatorApp' }
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
   # - commands: ['move --workspace 8']
