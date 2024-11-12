@@ -12,7 +12,7 @@ i {
 body {
   color: rgb(255 255 255 / 90%);
   font-family: ui-monospace, monospace;
-  font-size: 12px;
+  font-size: 16px;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ body,
 
 #root {
   border-bottom: 1px solid rgb(255 255 255 / 5%);
-  background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+  background: rgb(0 0 0 / 33%);
 }
 
 .app {
@@ -48,6 +48,10 @@ body,
 
 .right {
   justify-self: end;
+}
+
+.logo {
+	display: none;
 }
 
 .logo,

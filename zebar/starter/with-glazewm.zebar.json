@@ -5,17 +5,17 @@
   "shownInTaskbar": false,
   "focused": false,
   "resizable": false,
-  "transparent": false,
+  "transparent": true,
   "presets": [
     {
       "name": "default",
-      "anchor": "top_left",
+      "anchor": "bottom_left",
       "offsetX": "0px",
       "offsetY": "0px",
       "width": "100%",
       "height": "40px",
       "monitorSelection": {
-        "type": "all"
+        "type": "primary"
       }
     }
   ]
