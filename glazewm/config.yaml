@@ -1,7 +1,7 @@
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start Zebar.
-  startup_commands: ['shell-exec %userprofile%/.glzr/zebar/start.bat']
+  startup_commands: ['shell-exec zebar']
 
   # Whether to automatically focus windows underneath the cursor.
   focus_follows_cursor: false
@@ -25,9 +25,9 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '4px'
+    top: '44px'
     right: '4px'
-    bottom: '44px'
+    bottom: '4px'
     left: '4px'
 
 window_effects:
@@ -100,7 +100,7 @@ window_rules:
 
       - window_title: { regex: 'Volume Mixer.*' }
       - window_process: { equals: '7zG' }
-      # - window_process: { equals: 'mpv' }
+      - window_process: { equals: 'mpv' }
   - commands: ['set-floating']
     match:
       # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
