@@ -3,6 +3,13 @@ general:
   # another application). Here we are running a batch script to start Zebar.
   startup_commands: ['shell-exec zebar']
 
+  # Commands to run just before the WM is shutdown.
+  # Example: The below command kills Zebar.
+  shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
+
+  # Commands to run after the WM config is reloaded.
+  config_reload_commands: []
+
   # Whether to automatically focus windows underneath the cursor.
   focus_follows_cursor: false
 
@@ -19,7 +26,17 @@ general:
     # - 'window_focus': Jump when focus changes between windows.
     trigger: 'monitor_focus'
 
+  # How windows should be hidden when switching workspaces.
+  # - 'cloak': Recommended. Hides windows with no animation and keeps them
+  # visible in the taskbar.
+  # - 'hide': Legacy method (v3.5 and earlier) that has a brief animation,
+  # but has stability issues with some apps.
+  hide_method: 'cloak'
+
 gaps:
+  # Whether to scale the gaps with the DPI of the monitor.
+  scale_with_dpi: true
+
   # Gap between adjacent windows.
   inner_gap: '4px'
 
@@ -122,7 +139,7 @@ window_rules:
       - window_process: { equals: 'vlc' }
       - window_process: { equals: 'parsecd' }
       - window_process: { equals: '7zFM' }
-      - window_process: { equals: 'CalculatorApp' }
+      - window_title: { equals: 'Calculator' }
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
   # - commands: ['move --workspace 8']
@@ -132,6 +149,9 @@ window_rules:
       # - window_process: { equals: 'EpicGamesLauncher' }
       # - window_process: { equals: 'GalaxyClient' }
       # - window_process: { equals: 'Playnite.DesktopApp' }
+  - commands: ['move --workspace 0']
+    match:
+      - window_process: { equals: 'steamwebhelper' }
   - commands: ['move --workspace -']
     match:
       - window_process: { equals: 'Spotify' }
@@ -206,8 +226,8 @@ keybindings:
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
-  - commands: ['toggle-tiling-direction']
-    bindings: ['alt+v']
+  # - commands: ['toggle-tiling-direction']
+  #   bindings: ['alt+v']
 
   # Change focus from tiling windows -> floating -> fullscreen.
   - commands: ['wm-cycle-focus']
@@ -234,7 +254,7 @@ keybindings:
     bindings: ['alt+shift+q']
 
   # Kill GlazeWM process safely.
-  - commands: ['shell-exec taskkill /IM "zebar.exe" /F', 'wm-exit']
+  - commands: ['wm-exit']
     bindings: ['alt+shift+e']
 
   # Re-evaluate configuration file.
