@@ -27,25 +27,30 @@ general:
     trigger: 'monitor_focus'
 
   # How windows should be hidden when switching workspaces.
-  # - 'cloak': Recommended. Hides windows with no animation and keeps them
-  # visible in the taskbar.
+  # - 'cloak': Recommended. Hides windows with no animation.
   # - 'hide': Legacy method (v3.5 and earlier) that has a brief animation,
   # but has stability issues with some apps.
   hide_method: 'cloak'
+
+  # Affects which windows get shown in the native Windows taskbar. Has no
+  # effect if `hide_method: 'hide'`.
+  # - 'true': Show all windows (regardless of workspace).
+  # - 'false': Only show windows from the currently shown workspaces.
+  show_all_in_taskbar: false
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '4px'
+  inner_gap: '0px'
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '4px'
-    right: '4px'
-    bottom: '44px'
-    left: '4px'
+    top: '0px'
+    right: '0px'
+    bottom: '0px'
+    left: '0px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -118,6 +123,9 @@ window_rules:
       - window_title: { regex: 'Volume Mixer.*' }
       - window_process: { equals: '7zG' }
       - window_process: { equals: 'mpv' }
+      # TODO: Check if this PoE issues are fixed at some point
+      - window_process: { equals: 'PathOfExile_x64Steam' }
+      - window_process: { equals: 'PathOfExileSteam' }
   - commands: ['set-floating']
     match:
       # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
@@ -142,23 +150,18 @@ window_rules:
       - window_title: { equals: 'Calculator' }
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
+      - window_process: { equals: 'nvcplui' }
+  # TODO: make these commands work properly
   # - commands: ['move --workspace 8']
   #   match:
-      # - window_process: { equals: 'steamwebhelper' }
-      # - window_process: { equals: 'Battle.net' }
-      # - window_process: { equals: 'EpicGamesLauncher' }
-      # - window_process: { equals: 'GalaxyClient' }
-      # - window_process: { equals: 'Playnite.DesktopApp' }
-  - commands: ['move --workspace 0']
-    match:
-      - window_process: { equals: 'steamwebhelper' }
-  - commands: ['move --workspace -']
-    match:
-      - window_process: { equals: 'Spotify' }
-  - commands: ['move --workspace +']
-    match:
-      - window_process: { equals: 'Discord' }
-      - window_process: { equals: 'Telegram' }
+  #     - window_process: { equals: 'steamwebhelper' }
+  # - commands: ['move --workspace 9']
+  #   match:
+  #     - window_process: { equals: 'Spotify' }
+  # - commands: ['move --workspace 0']
+  #   match:
+  #     - window_process: { equals: 'Discord' }
+  #     - window_process: { equals: 'Telegram' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -271,10 +274,10 @@ keybindings:
   - commands: ['shell-exec %ProgramFiles%/WezTerm/wezterm-gui.exe']
     bindings: ['alt+n']
 
-  # Focus the next/previous workspace defined in `workspaces` config.
-  # - commands: ['focus --next-workspace']
+  # Focus the next/previous active workspace defined in `workspaces` config.
+  # - commands: ['focus --next-active-workspace']
   #   bindings: ['alt+s']
-  # - commands: ['focus --prev-workspace']
+  # - commands: ['focus --prev-active-workspace']
   #   bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
