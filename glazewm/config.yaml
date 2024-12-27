@@ -120,7 +120,7 @@ window_rules:
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper*' }
 
-      - window_title: { regex: 'Volume Mixer.*' }
+      - window_title: { regex: 'Volume Mixer' }
       - window_process: { equals: '7zG' }
       - window_process: { equals: 'mpv' }
       # TODO: Check if this PoE issues are fixed at some point
@@ -140,7 +140,8 @@ window_rules:
       - window_process: { equals: 'Playnite.DesktopApp' }
       - window_process: { equals: 'wezterm-gui' }
       - window_process: { equals: 'blender' }
-      - window_process: { equals: 'godot' }
+      - window_process: { equals: 'WindowsTerminal' }
+      - window_process: { regex: '[Gg]odot' }
       - window_process: { equals: 'Everything' }
       - window_process: { equals: 'MailClient' }
       - window_process: { equals: 'qbittorrent' }
