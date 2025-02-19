@@ -18,7 +18,7 @@
         "type": "primary"
       },
       "dockToEdge": {
-        "enabled": true,
+        "enabled": false,
         "edge": null,
         "windowMargin": "0px"
       }

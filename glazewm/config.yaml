@@ -49,7 +49,7 @@ gaps:
   outer_gap:
     top: '0px'
     right: '0px'
-    bottom: '0px'
+    bottom: '40px'
     left: '0px'
 
 window_effects:
@@ -152,6 +152,7 @@ window_rules:
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
+      # - window_title: { regex: 'Bitwarden' }
   # TODO: make these commands work properly
   # - commands: ['move --workspace 8']
   #   match:
@@ -243,7 +244,7 @@ keybindings:
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+shift+space']
+    bindings: ['alt+z']
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
