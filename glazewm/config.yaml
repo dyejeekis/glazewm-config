@@ -239,12 +239,12 @@ keybindings:
     bindings: ['alt+c']
 
   # Change the focused window to be floating.
-  # - commands: ['toggle-floating --centered']
-  #   bindings: ['alt+shift+space']
+  - commands: ['toggle-floating --centered']
+    bindings: ['alt+f']
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+z']
+    bindings: ['alt+t']
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
