@@ -1,0 +1,173 @@
+/**
+ * Import the Nerdfonts icon font.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+:root {
+  --text-size: 13;
+  --icon-size: 13;
+
+  --text-color-light: #222;
+  --text-color-dark: #eee;
+
+  --icon-color-light: #555;
+  --icon-color-dark: #aaa;
+
+  --background-color-light: #f2f2f2;
+  --background-color-dark: #111;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--text-color-light);
+  }
+
+  i {
+    color: var(--icon-color-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-color-dark);
+  }
+
+  i {
+    color: var(--icon-color-dark);
+  }
+
+  #root {
+    background: var(--background-color-dark);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: ui-monospace, monospace;
+  font-size: var(--text-size);
+}
+
+#root,
+.app {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional soft shadow */
+  overflow: hidden; /* Ensures children respect rounded corners */
+  background: transparent}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+i {
+  font-size: var(--icon-size);
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 10px 4px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspaces {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.workspace {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border: none;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  text-align: center;
+  width: 30px;
+  transition: width 0.05s ease;
+}
+
+.workspace.displayed {
+  /* background: rgba(255, 255, 255, 0.1); */
+}
+
+.workspace.focused,
+.workspace:hover {
+  background: rgba(255, 255, 255, 0.3);
+  width: 40px;
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: rgb(255 255 255 / 15%);
+  color: rgb(255 255 255 / 90%);
+  border-radius: 2px;
+  padding: 4px;
+  border: 0;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.binding-mode {
+  margin: 2px 0;
+}
+
+.battery,
+.memory {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cpu .high-usage {
+  color: #900029;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}

@@ -1,0 +1,40 @@
+[2m2025-06-11T00:05:52.668765Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:10:52.023777Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:11:21.566077Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:12:32.561215Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:13:31.774691Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:13:46.648668Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:15:42.409619Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:21:26.507301Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:21:58.190171Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    trailing comma at line 9 column 3
+[2m2025-06-11T00:24:55.708617Z[0m [31mERROR[0m [2mzebar[0m[2m:[0m Failed to parse JSON from file: C:\Users\sound\.glzr/zebar\settings.json
+
+Caused by:
+    missing field `pack` at line 7 column 5

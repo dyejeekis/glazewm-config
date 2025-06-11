@@ -1,0 +1,6 @@
+{
+  "FLOW_LAUNCHER_PATH": "C:\\Program Files\\WindowsApps\\Microsoft.CommandPalette_0.1.1.0_x64__8wekyb3d8bbwe\\Microsoft.CmdPal.UI.exe",
+  "USE_AUTOTILING": true,
+  "AUTOTILING_WEBSOCKET_URI": "ws://localhost:6123",
+  "MEDIA_MAX_WIDTH": "300"
+}
