@@ -165,9 +165,8 @@ window_rules:
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
-      # - window_process: { regex: 'Microsoft' }
-      - window_title: { regex: 'Command Palette' }
-      # - window_title: { regex: 'Bitwarden' }
+      - window_title: { equals: 'Command Palette' }
+
   # TODO: make these commands work properly
   # - commands: ['move --workspace 8']
   #   match:
