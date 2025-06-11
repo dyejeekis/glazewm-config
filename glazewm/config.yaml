@@ -132,7 +132,9 @@ window_rules:
 
       - window_title: { regex: 'Volume Mixer' }
       - window_process: { equals: '7zG' }
+      - window_title: { equals: 'Command Palette' }
       # - window_process: { equals: 'mpv' }
+
       # TODO: Check if this PoE issues are fixed at some point
       - window_process: { equals: 'PathOfExile_x64Steam' }
       - window_process: { equals: 'PathOfExileSteam' }
@@ -165,7 +167,6 @@ window_rules:
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
-      - window_title: { equals: 'Command Palette' }
 
   # TODO: make these commands work properly
   # - commands: ['move --workspace 8']
