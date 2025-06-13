@@ -168,17 +168,58 @@ window_rules:
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
 
-  # TODO: make these commands work properly
+  # TODO: none of this shit works as it should
+  # - commands: ['move --workspace 1']
+  #   match:
+  #     - window_process: { regex: 'zen' }
+  #
+  # - commands: ['move --workspace 2']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace 3']
+  #   match:
+  #     - window_process: { regex: 'godot' }
+  #
+  # - commands: ['move --workspace 4']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace 5']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace 6']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace 6']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace 7']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
   # - commands: ['move --workspace 8']
   #   match:
-  #     - window_process: { equals: 'steamwebhelper' }
+  #     - window_process: { regex: 'steamwebhelper' }
+  #
   # - commands: ['move --workspace 9']
   #   match:
-  #     - window_process: { equals: 'Spotify' }
+  #     - window_process: { regex: 'Spotify' }
+  #
   # - commands: ['move --workspace 0']
   #   match:
-  #     - window_process: { equals: 'Discord' }
-  #     - window_process: { equals: 'Telegram' }
+  #     - window_process: { regex: 'Discord|Telegram' }
+  #
+  # - commands: ['move --workspace -']
+  #   match:
+  #     - window_process: { regex: '' }
+  #
+  # - commands: ['move --workspace +']
+  #   match:
+  #     - window_process: { regex: '' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
