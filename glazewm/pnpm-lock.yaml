@@ -1,0 +1,54 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      glazewm:
+        specifier: latest
+        version: 1.7.0(ws@8.18.2)
+      ws:
+        specifier: latest
+        version: 8.18.2
+
+packages:
+
+  glazewm@1.7.0:
+    resolution: {integrity: sha512-UWwtO4OZMOytA3KS70xihxJLqGJxtLE3XUnhLxrAgbXhIhy/0B4yF4RX3dEETozeB0sUbCnWc0a5KY8saErm2A==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      ws: '*'
+    peerDependenciesMeta:
+      ws:
+        optional: true
+
+  tslib@2.6.1:
+    resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
+
+  ws@8.18.2:
+    resolution: {integrity: sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
+snapshots:
+
+  glazewm@1.7.0(ws@8.18.2):
+    dependencies:
+      tslib: 2.6.1
+    optionalDependencies:
+      ws: 8.18.2
+
+  tslib@2.6.1: {}
+
+  ws@8.18.2: {}

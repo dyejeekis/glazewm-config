@@ -1,0 +1,14 @@
+{
+  "name": "glazewm-startup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Startup script for glazewm",
+  "main": "startup.js",
+  "scripts": {
+    "start": "node startup.js"
+  },
+  "dependencies": {
+    "glazewm": "latest",
+    "ws": "latest"
+  }
+}

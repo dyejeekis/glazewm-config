@@ -1,7 +1,10 @@
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start Zebar.
-  startup_commands: ['shell-exec zebar']
+  startup_commands: [
+    'shell-exec zebar',
+    # 'shell-exec node "C:\Users\sound\.glzr\glazewm\startup.js"',
+  ]
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
@@ -101,6 +104,7 @@ window_behavior:
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
 
+
 workspaces:
   - name: '1'
   - name: '2'
@@ -114,6 +118,7 @@ workspaces:
   - name: '0'
   - name: '-'
   - name: '+'
+
 
 window_rules:
   - commands: ['ignore']
@@ -141,6 +146,7 @@ window_rules:
 
       # Elden Ring doesn't play well with GlazeWM for some reason
       - window_process: { equals: 'eldenring' }
+
   - commands: ['set-floating']
     match:
       # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
@@ -221,6 +227,7 @@ window_rules:
   #   match:
   #     - window_process: { regex: '' }
 
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: 'resize'
@@ -243,6 +250,7 @@ binding_modes:
     keybindings:
       - commands: ['wm-disable-binding-mode --name pause']
         bindings: ['alt+shift+p']
+
 
 keybindings:
   # Shift focus in a given direction.
