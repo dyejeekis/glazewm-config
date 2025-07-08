@@ -131,9 +131,18 @@ window_rules:
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
 
       # Ignore rules for various 3rd-party apps.
-      - window_process: { equals: 'PowerToys.PowerAccent' }
+      - window_process: { equals: 'PowerToys' }
+        window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
+      - window_process: { equals: 'PowerToys' }
+        window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
-        window_class: { regex: 'HwndWrapper*' }
+        window_class: { regex: 'HwndWrapper' }
+      - window_process: { equals: 'EXCEL' }
+        window_class: { not_regex: 'XLMAIN' }
+      - window_process: { equals: 'WINWORD' }
+        window_class: { not_regex: 'OpusApp' }
+      - window_process: { equals: 'POWERPNT' }
+        window_class: { not_regex: 'PPTFrameClass' }
 
       - window_title: { regex: 'Volume Mixer' }
       - window_process: { equals: '7zG' }
