@@ -153,8 +153,9 @@ window_rules:
       - window_process: { equals: 'PathOfExile_x64Steam' }
       - window_process: { equals: 'PathOfExileSteam' }
 
-      # Elden Ring doesn't play well with GlazeWM for some reason
+      # Some games don't play well with GlazeWM for reasons
       - window_process: { equals: 'eldenring' }
+      - window_process: { equals: 'Spider-Man' }
 
   - commands: ['set-floating']
     match:
