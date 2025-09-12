@@ -325,8 +325,8 @@ keybindings:
     bindings: ['alt+x']
 
   # Minimize focused window.
-  - commands: ['toggle-minimized']
-    bindings: ['alt+m']
+  # - commands: ['toggle-minimized']
+  #   bindings: ['alt+m']
 
   # Close focused window.
   - commands: ['close']
