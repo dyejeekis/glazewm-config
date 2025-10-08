@@ -156,6 +156,7 @@ window_rules:
       # Some games don't play well with GlazeWM for reasons
       - window_process: { equals: 'eldenring' }
       - window_process: { equals: 'Spider-Man' }
+      - window_process: { equals: 'StarCraft' }
 
   - commands: ['set-floating']
     match:
@@ -176,6 +177,7 @@ window_rules:
       - window_process: { equals: 'Everything' }
       - window_process: { equals: 'MailClient' }
       - window_process: { equals: 'qbittorrent' }
+      - window_process: { equals: 'SoulseekQT' }
       - window_process: { equals: 'vlc' }
       - window_process: { equals: 'parsecd' }
       - window_process: { equals: '7zFM' }
