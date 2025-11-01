@@ -2,7 +2,8 @@ general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start Zebar.
   startup_commands: [
-    'shell-exec zebar',
+    # Temporarily disable, causes issues with hide_method and show_all_in_taskbar
+    # 'shell-exec zebar',
     # 'shell-exec node "C:\Users\sound\.glzr\glazewm\startup.js"',
   ]
 
@@ -327,8 +328,8 @@ keybindings:
     bindings: ['alt+x']
 
   # Minimize focused window.
-  # - commands: ['toggle-minimized']
-  #   bindings: ['alt+m']
+  - commands: ['toggle-minimized']
+    bindings: ['alt+shift+m']
 
   # Close focused window.
   - commands: ['close']
