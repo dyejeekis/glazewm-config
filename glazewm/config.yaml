@@ -158,6 +158,7 @@ window_rules:
       - window_process: { equals: 'eldenring' }
       - window_process: { equals: 'Spider-Man' }
       - window_process: { equals: 'StarCraft' }
+      - window_process: { equals: 'MGSDelta-Win64-Shipping' }
 
   - commands: ['set-floating']
     match:
@@ -186,6 +187,7 @@ window_rules:
       - window_process: { equals: 'studio64' }
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
+      - window_process: { equals: 'Affinity' }
 
   # TODO: none of this shit works as it should
   # - commands: ['move --workspace 1']
