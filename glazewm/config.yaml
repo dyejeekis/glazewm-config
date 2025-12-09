@@ -188,6 +188,7 @@ window_rules:
       - window_process: { equals: 'mpv' }
       - window_process: { equals: 'nvcplui' }
       - window_process: { equals: 'Affinity' }
+      - window_process: { equals: 'krita' }
 
   # TODO: none of this shit works as it should
   # - commands: ['move --workspace 1']
