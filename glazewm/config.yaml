@@ -84,7 +84,7 @@ window_effects:
 window_behavior:
   # New windows are created in this state whenever possible.
   # Allowed values: 'tiling', 'floating'.
-  initial_state: 'tiling'
+  initial_state: 'floating'
 
   # Sets the default options for when a new window is created. This also
   # changes the defaults for when the state change commands, like
@@ -148,47 +148,51 @@ window_rules:
       - window_title: { regex: 'Volume Mixer' }
       - window_process: { equals: '7zG' }
       - window_title: { equals: 'Command Palette' }
-      # - window_process: { equals: 'mpv' }
 
+      # Some games don't play well with GlazeWM for reasons
+      # TODO: check this again
+      # - window_process: { equals: 'Spider-Man' }
       # TODO: Check if this PoE issues are fixed at some point
       - window_process: { equals: 'PathOfExile_x64Steam' }
       - window_process: { equals: 'PathOfExileSteam' }
+      # Completely broken, keeps minimizing
+      - window_process: { equals: 'Overwatch' }
+      # Kinda broken but works?
+      # - window_process: { equals: 'StarCraft' }
 
-      # Some games don't play well with GlazeWM for reasons
-      - window_process: { equals: 'eldenring' }
-      - window_process: { equals: 'Spider-Man' }
-      - window_process: { equals: 'StarCraft' }
-      - window_process: { equals: 'MGSDelta-Win64-Shipping' }
+      # Used to be broken
+      # - window_process: { equals: 'eldenring' }
+      # - window_process: { equals: 'MGSDelta-Win64-Shipping' }
 
-  - commands: ['set-floating']
-    match:
-      # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
-      - window_class: { equals: '#32770' }
-      - window_process: { equals: 'Taskmgr' }
-      - window_process: { equals: 'explorer' }
-      - window_process: { equals: 'xnviewmp' }
-      - window_process: { equals: 'steamwebhelper' }
-      - window_process: { equals: 'Battle.net' }
-      - window_process: { equals: 'EpicGamesLauncher' }
-      - window_process: { equals: 'GalaxyClient' }
-      - window_process: { equals: 'Playnite.DesktopApp' }
-      - window_process: { equals: 'wezterm-gui' }
-      - window_process: { equals: 'blender' }
-      - window_process: { equals: 'WindowsTerminal' }
-      - window_process: { regex: '[Gg]odot' }
-      - window_process: { equals: 'Everything' }
-      - window_process: { equals: 'MailClient' }
-      - window_process: { equals: 'qbittorrent' }
-      - window_process: { equals: 'SoulseekQT' }
-      - window_process: { equals: 'vlc' }
-      - window_process: { equals: 'parsecd' }
-      - window_process: { equals: '7zFM' }
-      - window_title: { equals: 'Calculator' }
-      - window_process: { equals: 'studio64' }
-      - window_process: { equals: 'mpv' }
-      - window_process: { equals: 'nvcplui' }
-      - window_process: { equals: 'Affinity' }
-      - window_process: { equals: 'krita' }
+  # - commands: ['set-floating'] # It's all floating by default now
+  #   match:
+  #     # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  #     - window_class: { equals: '#32770' }
+  #     - window_process: { equals: 'Taskmgr' }
+  #     - window_process: { equals: 'explorer' }
+  #     - window_process: { equals: 'xnviewmp' }
+  #     - window_process: { equals: 'steamwebhelper' }
+  #     - window_process: { equals: 'Battle.net' }
+  #     - window_process: { equals: 'EpicGamesLauncher' }
+  #     - window_process: { equals: 'GalaxyClient' }
+  #     - window_process: { equals: 'Playnite.DesktopApp' }
+  #     - window_process: { equals: 'wezterm-gui' }
+  #     - window_process: { equals: 'blender' }
+  #     - window_process: { equals: 'WindowsTerminal' }
+  #     - window_process: { regex: '[Gg]odot' }
+  #     - window_process: { equals: 'Everything' }
+  #     - window_process: { equals: 'MailClient' }
+  #     - window_process: { equals: 'qbittorrent' }
+  #     - window_process: { equals: 'SoulseekQT' }
+  #     - window_process: { equals: 'vlc' }
+  #     - window_process: { equals: 'parsecd' }
+  #     - window_process: { equals: '7zFM' }
+  #     - window_title: { equals: 'Calculator' }
+  #     - window_process: { equals: 'studio64' }
+  #     - window_process: { equals: 'mpv' }
+  #     - window_process: { equals: 'nvcplui' }
+  #     - window_process: { equals: 'Affinity' }
+  #     - window_process: { equals: 'krita' }
 
   # TODO: none of this shit works as it should
   # - commands: ['move --workspace 1']
