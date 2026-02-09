@@ -157,6 +157,7 @@ window_rules:
       - window_process: { equals: 'PathOfExileSteam' }
       # Completely broken, keeps minimizing
       - window_process: { equals: 'Overwatch' }
+      - window_process: { equals: 'SC2_x64' }
       # Kinda broken but works?
       # - window_process: { equals: 'StarCraft' }
 
